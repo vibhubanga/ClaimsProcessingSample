@@ -63,7 +63,7 @@ namespace ClaimsProcessingSample.Client.Pages.Identity
 
         private void ManageRoles(string userId, string email)
         {
-            if (email == "mukesh@blazorhero.com") _snackBar.Add(localizer["Not Allowed."], Severity.Error);
+            if (email == "vibhu@test.com") _snackBar.Add(localizer["Not Allowed."], Severity.Error);
             else _navigationManager.NavigateTo($"/identity/user-roles/{userId}");
         }
     }

@@ -62,10 +62,10 @@ namespace ClaimsProcessingSample.Infrastructure
                 //Check if User Exists
                 var superUser = new BlazorHeroUser
                 {
-                    FirstName = "Mukesh",
-                    LastName = "Murugan",
-                    Email = "mukesh@blazorhero.com",
-                    UserName = "mukesh",
+                    FirstName = "Vibhu",
+                    LastName = "Banga",
+                    Email = "vibhu@test.com",
+                    UserName = "vibhu",
                     EmailConfirmed = true,
                     PhoneNumberConfirmed = true,
                     CreatedOn = DateTime.Now,

@@ -50,7 +50,7 @@ namespace ClaimsProcessingSample.Server.Extensions
 
             foreach (var initializer in initializers)
             {
-                initializer.Initialize();
+                //initializer.Initialize();
             }
 
             return app;

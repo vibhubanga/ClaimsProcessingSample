@@ -38,8 +38,8 @@ namespace ClaimsProcessingSample.Client.Pages.Authentication
 
         private void FillAdminstratorCredentials()
         {
-            model.Email = "mukesh@blazorhero.com";
-            model.Password = "123Pa$$word!";
+            model.Email = "vibhu@test.com";
+            model.Password = "Test@123";
         }
 
         private void FillBasicUserCredentials()

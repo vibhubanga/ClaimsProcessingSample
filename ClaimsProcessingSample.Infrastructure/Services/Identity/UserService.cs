@@ -71,7 +71,7 @@ namespace ClaimsProcessingSample.Infrastructure.Services.Identity
                     if (!request.AutoConfirmEmail)
                     {
                         var verificationUri = await SendVerificationEmail(user, origin);
-                        BackgroundJob.Enqueue(() => _mailService.SendAsync(new MailRequest() { From = "mail@codewithmukesh.com", To = user.Email, Body = $"Please confirm your account by <a href='{verificationUri}'>clicking here</a>.", Subject = "Confirm Registration" }));
+                        BackgroundJob.Enqueue(() => _mailService.SendAsync(new MailRequest() { From = "mail@test.com", To = user.Email, Body = $"Please confirm your account by <a href='{verificationUri}'>clicking here</a>.", Subject = "Confirm Registration" }));
                         return Result<string>.Success(user.Id, message: $"User Registered. Please check your Mailbox to verify!");
                     }
                     return Result<string>.Success(user.Id, message: $"User Registered");
@@ -148,7 +148,7 @@ namespace ClaimsProcessingSample.Infrastructure.Services.Identity
         public async Task<IResult> UpdateRolesAsync(UpdateUserRolesRequest request)
         {
             var user = await _userManager.FindByIdAsync(request.UserId);
-            if (user.Email == "mukesh@blazorhero.com") return Result.Fail("Not Allowed.");
+            if (user.Email == "vibhu@test.com") return Result.Fail("Not Allowed.");
             var roles = await _userManager.GetRolesAsync(user);
             var result = await _userManager.RemoveFromRolesAsync(user, roles);
             result = await _userManager.AddToRolesAsync(user, request.UserRoles.Where(x => x.Selected).Select(y => y.RoleName));

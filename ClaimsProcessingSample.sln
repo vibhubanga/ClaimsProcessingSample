@@ -5,13 +5,6 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{0317DF35-F5C5-4986-BA37-40C28554268F}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{275B08FA-6837-4A32-B890-0ADE2DE4C3F7}"
-	ProjectSection(SolutionItems) = preProject
-		Features.md = Features.md
-		LICENSE = LICENSE
-		README.md = README.md
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{885BB018-5B07-4038-B061-71B70188933B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D564603F-8CDE-4D4C-9683-67FA9DCE7F12}"
@@ -32,8 +25,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClaimsProcessingSample.Application", "ClaimsProcessingSample.Application\ClaimsProcessingSample.Application.csproj", "{9C175F31-4041-47AF-9577-D7AC488C2DFA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClaimsProcessingSample.Infrastructure", "ClaimsProcessingSample.Infrastructure\ClaimsProcessingSample.Infrastructure.csproj", "{4B1846FD-5793-47BD-B89D-ABFB53141272}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1D491AAE-7A45-4B6B-9E3B-F8F3F0EFDED5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{FFBDEDF1-17E2-4F72-AE03-C99B44D8BFCA}"
 EndProject
