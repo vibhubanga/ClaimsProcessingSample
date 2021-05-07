@@ -1,0 +1,3 @@
+﻿namespace ClaimsProcessingSample.Infrastructure.Extensions
+{
+}
