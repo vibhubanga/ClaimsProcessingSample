@@ -50,6 +50,7 @@ namespace ClaimsProcessingSample.Server.Extensions
 
             foreach (var initializer in initializers)
             {
+                //TEMP CHANGE FOR DEBUG ERROR
                 //initializer.Initialize();
             }
 
