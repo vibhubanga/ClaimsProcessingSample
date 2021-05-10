@@ -52,16 +52,16 @@
     @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Products.View).Result.Succeeded || _authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Brands.View).Result.Succeeded)
     {
         <MudListSubheader Class="mt-2 mb-n2">@localizer["Catalog Management"]</MudListSubheader>
-        @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Products.View).Result.Succeeded)
-        {
-            <MudNavLink Href="/catalog/products" Icon="@Icons.Material.Outlined.CallToAction">
-                @localizer["Products"]
-            </MudNavLink>
-        }
         @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Brands.View).Result.Succeeded)
         {
             <MudNavLink Href="/catalog/brands" Icon="@Icons.Material.Outlined.CallToAction">
                 @localizer["Brands"]
+            </MudNavLink>
+        }
+        @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Products.View).Result.Succeeded)
+        {
+            <MudNavLink Href="/catalog/products" Icon="@Icons.Material.Outlined.CallToAction">
+                @localizer["Products"]
             </MudNavLink>
         }
     }

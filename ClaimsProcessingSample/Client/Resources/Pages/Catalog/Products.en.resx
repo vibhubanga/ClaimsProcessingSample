@@ -124,7 +124,7 @@
     <value>Barcode</value>
   </data>
   <data name="Brand" xml:space="preserve">
-    <value>Brand</value>
+    <value>Payer</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>Create</value>
@@ -148,16 +148,16 @@
     <value>Id</value>
   </data>
   <data name="Manage Products." xml:space="preserve">
-    <value>Manage Products.</value>
+    <value>Manage Claims.</value>
   </data>
   <data name="Name" xml:space="preserve">
     <value>Name</value>
   </data>
   <data name="Product Deleted" xml:space="preserve">
-    <value>Product Deleted!</value>
+    <value>Claim Deleted!</value>
   </data>
   <data name="Products" xml:space="preserve">
-    <value>Products</value>
+    <value>Claims</value>
   </data>
   <data name="Rate" xml:space="preserve">
     <value>Rate</value>

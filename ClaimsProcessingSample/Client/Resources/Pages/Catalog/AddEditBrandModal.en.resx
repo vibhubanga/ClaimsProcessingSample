@@ -118,13 +118,13 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Add Brand" xml:space="preserve">
-    <value>Add Brand</value>
+    <value>Add Payer</value>
   </data>
   <data name="Brand Saved" xml:space="preserve">
-    <value>Brand Saved!</value>
+    <value>Payer Saved!</value>
   </data>
   <data name="Brand Updated" xml:space="preserve">
-    <value>Brand Updated!</value>
+    <value>Payer Updated!</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
@@ -148,6 +148,6 @@
     <value>Update</value>
   </data>
   <data name="Update Brand" xml:space="preserve">
-    <value>Update Brand</value>
+    <value>Update Payer</value>
   </data>
 </root>

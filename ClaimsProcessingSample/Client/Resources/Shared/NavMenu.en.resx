@@ -127,7 +127,7 @@
     <value>Audit Trails</value>
   </data>
   <data name="Brands" xml:space="preserve">
-    <value>Brands</value>
+    <value>Payers</value>
   </data>
   <data name="Catalog Management" xml:space="preserve">
     <value>Catalog Management</value>
@@ -160,7 +160,7 @@
     <value>Personal</value>
   </data>
   <data name="Products" xml:space="preserve">
-    <value>Products</value>
+    <value>Claims</value>
   </data>
   <data name="Quick Start Guide" xml:space="preserve">
     <value>Quick Start Guide</value>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Brands" xml:space="preserve">
-    <value>Brands</value>
+    <value>Payers</value>
   </data>
   <data name="Charts comming soon ish..." xml:space="preserve">
     <value>Charts comming soon ish...</value>
@@ -127,7 +127,7 @@
     <value>Dashboard</value>
   </data>
   <data name="Products" xml:space="preserve">
-    <value>Products</value>
+    <value>Claims</value>
   </data>
   <data name="Quick Insights." xml:space="preserve">
     <value>Quick Insights.</value>
