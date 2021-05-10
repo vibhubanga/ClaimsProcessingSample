@@ -45,7 +45,7 @@ namespace ClaimsProcessingSample.Client.Pages.Authentication
         private void FillBasicUserCredentials()
         {
             model.Email = "john@blazorhero.com";
-            model.Password = "123Pa$$word!";
+            model.Password = "Test@123";
         }
     }
 }
