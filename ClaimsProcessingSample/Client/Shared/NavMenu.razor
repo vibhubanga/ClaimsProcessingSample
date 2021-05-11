@@ -16,10 +16,12 @@
             </MudNavLink>
         }
 
-        <MudNavLink Href="/catalog/products" Icon="@Icons.Material.Outlined.CallToAction">
-            @localizer["Products"]
-        </MudNavLink>
-
+        @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Products.View).Result.Succeeded)
+        {
+            <MudNavLink Href="/catalog/products" Icon="@Icons.Material.Outlined.CallToAction">
+                @localizer["Products"]
+            </MudNavLink>
+        }
     }
     <MudListSubheader Class="mt-2 mb-n2">@localizer["Communication"]</MudListSubheader>
     <MudNavLink Href="/chat" Icon="@Icons.Material.Outlined.Chat">
