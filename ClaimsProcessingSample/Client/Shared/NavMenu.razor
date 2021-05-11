@@ -6,16 +6,29 @@
 <MudDivider Class="mb-4" />
 <MudNavMenu>
     <MudNavLink Href="/" Match="NavLinkMatch.All" Icon="@Icons.Material.Outlined.Home">@localizer["Home"]</MudNavLink>
-    <MudNavLink Href="/jobs" Icon="@Icons.Material.Outlined.Work">
-        @localizer["Hangfire"]
-    </MudNavLink>
-    <MudNavLink Href="https://codewithmukesh.com/blog/blazor-hero-quick-start-guide/" Target="_blank" Icon="@Icons.Material.Outlined.ReadMore">
-        @localizer["Quick Start Guide"]
-    </MudNavLink>
-    <MudNavLink Href="/swagger/index.html" Target="_blank" Icon="@Icons.Material.Outlined.LiveHelp">
-        @localizer["Swagger"]
+    @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Products.View).Result.Succeeded || _authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Brands.View).Result.Succeeded)
+    {
+        <MudListSubheader Class="mt-2 mb-n2">@localizer["Catalog Management"]</MudListSubheader>
+        @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Brands.View).Result.Succeeded)
+        {
+            <MudNavLink Href="/catalog/brands" Icon="@Icons.Material.Outlined.CallToAction">
+                @localizer["Brands"]
+            </MudNavLink>
+        }
+
+        <MudNavLink Href="/catalog/products" Icon="@Icons.Material.Outlined.CallToAction">
+            @localizer["Products"]
+        </MudNavLink>
+
+    }
+    <MudListSubheader Class="mt-2 mb-n2">@localizer["Communication"]</MudListSubheader>
+    <MudNavLink Href="/chat" Icon="@Icons.Material.Outlined.Chat">
+        @localizer["Chat"]
     </MudNavLink>
     <MudListSubheader Class="mt-2 mb-n2">@localizer["Personal"]</MudListSubheader>
+    <MudNavLink Href="/audit-trails" Icon="@Icons.Material.Outlined.Security">
+        @localizer["Audit Trails"]
+    </MudNavLink>
     <MudNavLink Href="/dashboard" Icon="@Icons.Material.Outlined.Dashboard">
         @localizer["Dashboard"]
     </MudNavLink>
@@ -25,9 +38,7 @@
     <MudNavLink Href="/document-store" Icon="@Icons.Material.Outlined.AttachFile">
         @localizer["Document Store"]
     </MudNavLink>
-    <MudNavLink Href="/audit-trails" Icon="@Icons.Material.Outlined.Security">
-        @localizer["Audit Trails"]
-    </MudNavLink>
+
     @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Roles.View).Result.Succeeded || _authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Users.View).Result.Succeeded)
     {
         <MudListSubheader Class="mt-2 mb-n2">
@@ -43,28 +54,18 @@
         {
             <MudNavLink Href="/identity/roles" Icon="@Icons.Material.Outlined.Person">@localizer["Roles"]</MudNavLink>
         }
+        <MudNavLink Href="/jobs" Icon="@Icons.Material.Outlined.Work">
+            @localizer["Hangfire"]
+        </MudNavLink>
     }
 
-    <MudListSubheader Class="mt-2 mb-n2">@localizer["Communication"]</MudListSubheader>
-    <MudNavLink Href="/chat" Icon="@Icons.Material.Outlined.Chat">
-        @localizer["Chat"]
+    <MudNavLink Href="https://codewithmukesh.com/blog/blazor-hero-quick-start-guide/" Target="_blank" Icon="@Icons.Material.Outlined.ReadMore">
+        @localizer["Quick Start Guide"]
     </MudNavLink>
-    @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Products.View).Result.Succeeded || _authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Brands.View).Result.Succeeded)
-    {
-        <MudListSubheader Class="mt-2 mb-n2">@localizer["Catalog Management"]</MudListSubheader>
-        @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Brands.View).Result.Succeeded)
-        {
-            <MudNavLink Href="/catalog/brands" Icon="@Icons.Material.Outlined.CallToAction">
-                @localizer["Brands"]
-            </MudNavLink>
-        }
-        @if (_authorizationService.AuthorizeAsync(AuthenticationStateProviderUser, Permissions.Products.View).Result.Succeeded)
-        {
-            <MudNavLink Href="/catalog/products" Icon="@Icons.Material.Outlined.CallToAction">
-                @localizer["Products"]
-            </MudNavLink>
-        }
-    }
+    <MudNavLink Href="/swagger/index.html" Target="_blank" Icon="@Icons.Material.Outlined.LiveHelp">
+        @localizer["Swagger"]
+    </MudNavLink>
+
 </MudNavMenu>
 
 @code {
